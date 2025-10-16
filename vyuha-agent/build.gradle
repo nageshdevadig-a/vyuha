@@ -1,0 +1,22 @@
+plugins{
+     id 'java'
+}
+group = 'com.nageshdevadiga.vyuha'
+version = '0.0.1-SNAPSHOT'
+description = 'Vyuha agent: Java 21 application that monitors host system metrics and Java applications, sending data to the server for storage and AI-powered anomaly detection.'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.0'
+}
+tasks.named('test') {
+    useJUnitPlatform()
+}
