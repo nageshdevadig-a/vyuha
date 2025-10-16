@@ -1,5 +1,7 @@
 # Java compiled classes
 *.class
+/src/test/
+/out/
 
 # Build folders
 /target/

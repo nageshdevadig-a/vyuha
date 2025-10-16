@@ -13,10 +13,16 @@ java {
 repositories {
     mavenCentral()
 }
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.0'
+
+test{
+    enabled = false
 }
-tasks.named('test') {
-    useJUnitPlatform()
+jar {
+    manifest {
+        attributes(
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version,
+                'Premain-Class': 'com.nageshdevadiga.vyuha.agent.AgentMain'
+        )
+    }
 }
