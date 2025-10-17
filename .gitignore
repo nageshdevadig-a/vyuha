@@ -2,6 +2,9 @@
 .idea/
 .vscode/
 
+# Temporary files
+demo-app/
+
 # OS files
 .DS_Store
 Thumbs.db
