@@ -18,3 +18,9 @@
 
 # Gradle
 .gradle/
+# Ignore everything in gradle/wrapper recursively
+gradle/wrapper/**
+# But keep the essential wrapper files
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
